@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form example 1</title>
+</head>
+<body>
+    <form method="post">
+        <table  align="center" style="background-color:darkseagreen  ;">
+            <caption>this is admission form</caption>
+            <tr>
+                <td><lable for="username">username</lable></td>
+                <td><input type="text" value="text" placeholder="enter your username" name="username" id="username"></td>
+            </tr>
+            <tr>
+                <td><lable for="lastname">lastname</lable></td>
+                <td><input type="text" name="lastname" placeholder="enter your lastname" id="username"></td>
+            </tr>
+            <tr>
+                <td><lable for="email"> email</lable></td>
+                <td><input type="email" name="email" placeholder="enter your email" id="email"></td>
+            </tr>
+            <tr>
+                <td><lable for="moblie number">moblie number</lable></td>
+                <td><input type="tel" name="moblie number" placeholder="enter your mobile number" id="moblie number"></td>
+            </tr>
+            <tr>
+                <td><lable for="password">password</lable></td>
+                <td><input type="password" name="password" placeholder="enter your password" id="password"></td>
+            </tr>
+           
+            <tr>
+                <td><lable for="gender">gender</lable></td>
+                <td><input type="radio" name="gender" placeholder="" id="male"><label for="male">Male</label> 
+                 <input type="radio" name="gender" placeholder="" id="female"><label for="female">Female</label></td>
+            </tr>
+            <tr>
+                <td><lable for="hobbies">hobbies</lable></td>
+                <td><input type="checkbox" name="chk[]" placeholder="" id="cricket" value="cricket"><label for="cricket">cricket</label>
+                     <input type="checkbox" name="chk[]" placeholder="" id="music"><label for="music">music</label>
+                     <input type="checkbox" name="chk[]" placeholder="" id="reading"><label for="reading">reading</label>
+                </td>
+            </tr>
+            <tr>
+                <td><lable for="age">age</lable></td>
+                <td><input type="number" name="age" placeholder="" id="age"></td>
+            </tr>
+            <tr>
+                <td><lable for="range">range</lable></td>
+                <td><input type="range" name="range" placeholder="" id="range"></td>
+            </tr>
+            <tr>
+                <td><lable for="meter"></lable></td>
+                <td><meter value="20" min="10" max="100"></meter>
+            </tr>
+            <tr>
+                <td><lable for="color">color</lable></td>
+                <td><input type="color" name="color" placeholder="" id="color"></td>
+            </tr>
+            <tr>
+                <td><lable for="address">address</lable></td>
+                <td><textarea name="address" id="address" cols="20" rows="5"></textarea>  </td>
+            </tr>
+            <tr>
+                <td><lable for="profile pic">profile image</lable></td>
+                <td><input type="file" accept="image/*"    name="profile pic" placeholder="" id="profile pic "></td>
+            </tr>
+            <tr>
+                <td><lable for="city">city</lable></td>
+                <td><select name="city" id="city">
+                    <option value="select city">select city</option> 
+                    <option value="surat">surat</option>
+                    <option value="rajkot">rajkot</option>
+                    <option value="ahemdabad">ahemdabad</option>
+                    <option value="junagadh">junagadh</option>
+                </select></td>
+            </tr>
+            <tr>
+                <td><lable for="education">education</lable></td>
+                <td><select name="education"  multiple id="education">
+                    <option value="10th">10th</option> 
+                    <option value="12th">12th</option>
+                    <option value="BCA">BCA</option>
+                    <option value="BSC">BSC</option>
+                    <option value="B.com">B.com</option>
+                </select></td>
+            </tr>
+            <tr>
+                <td><lable for="date"> birthadate</lable></td>
+                <td><input type="date" name="date" placeholder="" id="date"></td>
+            </tr>
+            <tr>
+                <td><lable for="time">time</lable></td>
+                <td><input type="datetime-local" name="time" placeholder="" id="time"></td>
+            </tr>
+            <tr>
+                <td><lable for="month">month</lable></td>
+                <td><input type="month" name="month" placeholder="" id="month"></td>
+            </tr>
+            <tr>
+                <td><lable for="week">week</lable></td>
+                <td><input type="week" name="week" placeholder="" id="week"></td>
+            </tr>
+            <tr>
+                <td><lable for="readonly">readonly</lable></td>
+                <td><input type="text" name="readonly" readonly value="raj@mail.com" placeholder="" id="readonly"></td>
+            </tr>
+            <tr>
+                <td><lable for="disabled">disabled</lable></td>
+                <td><input type="text"  name="disabled" disabled placeholder="" id="disabled"></td>
+            </tr>
+            <tr>
+                <td><lable for="url">URL</lable></td>
+                <td><input type="url" name="url" placeholder="url" id="url"></td>
+            </tr>
+            <tr>
+                <td><lable for="search">search</lable></td>
+                <td><input type="search" name="search" placeholder="" id=""></td>
+            </tr>
+            <tr>
+                
+                <td><input type="submit" name="submit" placeholder="" id=""></td>
+                <td><input type="reset" name="" placeholder="" id="reset"></td>
+            </tr>
+        
+        </table>  
+      </form>
+    
+</body>
+</html>
