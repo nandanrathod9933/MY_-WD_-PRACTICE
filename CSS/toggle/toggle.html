@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Header</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            text-decoration: none;
+            list-style: none;
+            box-sizing: border-box;
+        }
+
+        .logo img {
+            background-color: black;
+        }
+
+        .container {
+            width: 90%;
+            margin: 0 auto;
+        }
+
+        .align {
+            align-items: center;
+        }
+
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .justify {
+            justify-content: space-between;
+        }
+
+        .list ul li a {
+            color: black;
+            text-transform: capitalize;
+            font-size: 1.3rem;
+        }
+
+        .list ul li {
+            display: block;
+            margin: 20px;
+            text-align: center;
+        }
+
+        .list {
+            display: none;
+        }
+
+        .list {
+            width: 100%;
+            position: fixed;
+            top: 50px;
+            right: -100%;
+            transition: all 0.6s ease-in-out;
+            background: red;
+            display: block;
+        }
+
+        .list.show {
+            right: 0;
+        }
+
+        /* .list.show {
+  top: 40px;
+  left: 0;
+  width: 100%;
+  position: absolute;
+  background-color: aqua;
+  display: block;
+} */
+
+        /* @media (min-width: 576px) {
+  .list {
+    background-color: transparent;
+    display: block;
+    position: static;
+    transition: none;
+  }
+  .bar {
+    display: none;
+  }
+  .list ul li {
+    display: inline-block;
+    background-color: transparent;
+    margin: 0;
+    padding: 0 20px;
+  }
+} */
+
+        @media (min-width: 992px) {
+            .bar {
+                display: none;
+            }
+
+            .list {
+                position: static;
+                transition: none;
+                background: transparent;
+                display: block;
+            }
+
+            .list ul li {
+                display: inline-block;
+                padding: 0 20px;
+                margin: 0;
+            }
+
+            .list ul li a {
+                color: black;
+                text-transform: capitalize;
+                font-size: 1.3rem;
+            }
+        }
+    </style>
+
+
+
+
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="row justify align">
+                <div class="col">
+                    <div class="logo">
+                        <img src="./image/download.webp" alt="">
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="list">
+                        <ul>
+                            <li><a href="#">home</a></li>
+                            <li><a href="#">about</a></li>
+                            <li><a href="#">buy</a></li>
+                            <li><a href="#">contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="bar">
+                        <i class="fa-solid fa-2 fa-bars"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <script>
+        /* background-color: ; */
+        const btn = document.querySelector(".bar");
+        const navbar = document.querySelector(".list");
+        const anyone = document.querySelectorAll(".list li");
+
+
+        btn.addEventListener("click", () => {
+            // console.log("hello");
+            btn.classList.toggle("show");
+            navbar.classList.toggle("show");
+        });
+
+        let chokdi = document.querySelector(".bar");
+        let way = document.querySelector(".fa-bars");
+        chokdi.onclick = function () {
+            if (way.classList.contains("fa-bars")) {
+                way.classList.replace("fa-bars", "fa-times");
+            } else {
+                way.classList.replace("fa-times", "fa-bars");
+            }
+        }
+
+
+        anyone.forEach(element => {
+            element.addEventListener("click", () => {
+                navbar.classList.toggle("show");
+                way.classList.replace("fa-times", "fa-bars");
+
+            })
+        });
+    </script>
+
+</body>
+
+</html>
