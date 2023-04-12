@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+
+<body>
+    <div class="box">
+
+        <p>first value</p>
+        <input type="text" name="val1" id="val1"> <br>
+        <p>secound value</p>
+        <input type="text" name="val2" id="val2"> <br>
+        <p><b>press this btn to add two value</b></p>
+        <button onclick="add()">Add</button> <br>
+
+        <p>answer</p>
+        <input type="text" id="answer">
+
+        <p>NaN = not a number</p>
+    </div>
+
+    <!-- <input type="submit" value="submit"></input> -->
+    <script>
+        function add() {
+            var a, b, c;
+
+            a = Number(document.getElementById("val1").value);
+            b = Number(document.getElementById("val2").value);
+            c = a + b;
+
+            document.getElementById("answer").value = c;
+            // console.log(a);
+        }
+    </script>
+</body>
+
+</html>

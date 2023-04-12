@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form 5 Example</title>
+    <style>
+        body {
+            background: rgb(131, 58, 180);
+            background: linear-gradient(90deg, rgba(131, 58, 180, 1) 0%, rgba(253, 29, 29, 1) 50%, rgba(252, 176, 69, 1) 100%);
+        }
+
+        .box {
+            width: 50%;
+            margin: 50px auto;
+            padding: 20px;
+            border-radius: 30px;
+            background: rgba(238, 174, 202, 0.61);
+            background: radial-gradient(circle, rgba(238, 174, 202, 0.629) 0%, rgba(148, 188, 233, 0.695) 100%);
+        }
+
+        table tr td {
+            padding: 10px 0;
+        }
+
+        .btn_box {
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        .btn {
+            padding: 5px;
+            background-color: antiquewhite;
+            text-transform: uppercase;
+            margin: 0 10px;
+            background: none;
+            outline: none;
+            /* border: none; */
+        }
+
+        .input_mg {
+            width: 75%;
+            /* margin: 0 auto; */
+            padding: 10px;
+            outline: none;
+            font-size: 16px;
+            border-radius: 10px;
+            border: none;
+            display: block;
+        }
+
+        span {
+            display: block;
+            text-transform: capitalize;
+            color: rgba(146, 28, 28, 0.94);
+            /* font-size: 20px */
+        }
+
+        caption {
+            font-size: 30px;
+            padding-bottom: 5px;
+            text-transform: capitalize;
+            border-bottom: 2px dotted;
+            margin-bottom: 30px;
+        }
+
+        label {
+            font-size: 25px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="box">
+
+        <table align="center">
+            <form method="post">
+                <caption> Student Registeration Form</caption>
+
+                <tr>
+                    <td><Label for="fname">First name :</Label></td>
+                </tr>
+                <tr>
+                    <td>
+                        <input class="input_mg" type="text" id="fname"
+                            onblur="nandan(this, 'fnameerror', '* this is firstname required ')"
+                            onkeypress="return(event.which >=65 && event.which <= 90  ||  event.which >=97 && event.which <= 122)"
+                            placeholder="firstname">
+                    </td>
+                </tr>
+                <tr>
+                    <td><span id="fnameerror"></span></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><Label for="lname">Last name :</Label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="text" class="input_mg" id="lname" placeholder="lastname"
+                            onkeypress="return(event.which >=65 && event.which <= 90  ||  event.which >=97 && event.which <= 122)"
+                            onblur="nandan(this, 'lnameerror', '* this is lastname required ')">
+                    </td>
+                </tr>
+                <tr>
+                    <td><span id="lnameerror"></span></td>
+                </tr>
+                <tr>
+                    <td> <label for="phone">Phone :</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td> <input type="tel" class="input_mg" id="phone" maxlength="10" minlength="10"
+                            onblur="nandan(this, 'telerror', '* this is phone required ')"
+                            onkeypress="return(event.which >=48 && event.which <=57)" placeholder="telephone numeber">
+                    </td>
+                </tr>
+                <tr>
+                    <td><span id="telerror"></span></td>
+                </tr>
+                <tr>
+                    <td><label for="">Gender :</label></td>
+
+                </tr>
+                <tr>
+                    <td>
+                        <input type="radio" id="male" name="gender"><label for="male"> Male</label>
+                        <input type="radio" id="Female" name="gender"><label for="Female">Female</label>
+                        <input type="radio" id="other" name="gender"><label for="other">other</label>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="email">Email :</label>
+                    </td>
+
+                </tr>
+                <tr>
+                    <td> <input type="email" class="input_mg" id="email" onkeypress="checkemail(this)"
+                            onblur="nandan(this, 'emailerror', '* this is email required ')"
+                            placeholder=" Enter your email"></td>
+                </tr>
+                <tr>
+                    <td><span id="emailerror"></span></td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="password">Password :</label>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td> <input type="password" class="input_mg" id="password"
+                            onblur="nandan(this, 'passworderror', '* this is password required ')"
+                            placeholder="Enter your password"></td>
+                </tr>
+                <tr>
+                    <td><span id="passworderror"></span></td>
+                </tr>
+
+                <tr>
+                    <td> <label for="course">course :</label>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td> <select name="course" class="input_mg">
+                            <option value="course" selected>course</option>
+                            <option value="10th">10th</option>
+                            <option value="12th">12th</option>
+                            <option value="B.com">B.com</option>
+                            <option value="BCA">BCA</option>
+                            <option value="B.sc">B.sc</option>
+                        </select></td>
+
+                </tr>
+                <tr>
+                    <td><label for="date">Date</label></td>
+                </tr>
+                <tr>
+
+                    <td>
+                        <!-- <input type="date" id="date" onkeyup="checkDate(this, 'dateerror')"> -->
+                        <input type="text" name="date" id="date" placeholder="DD/MM/YYYY" class="input_mg"
+                            onkeyup=" checkDate(this, 'dateerror' )"
+                            onblur="nan(this, 'dateerror',  '* this is BirthDate required')" />
+                    </td>
+
+                </tr>
+                <tr>
+                    <td><span id="dateerror"></span></td>
+
+                </tr>
+
+                <tr>
+                    <td>
+                        <label for="address">Current address</label>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td> <textarea id="address" class="input_mg" placeholder="current address" cols="75"
+                            onblur="nandan(this, 'addresserror', '* this is addresserror required ')"
+                            rows="5"></textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td><span id="addresserror"></span></td>
+
+                </tr>
+                <tr>
+                    <td colspan="2" class="btn_box">
+                        <input type="submit" class="btn" value="register">
+                        <input type="reset" class="btn" value="reset">
+                    </td>
+                </tr>
+
+            </form>
+        </table>
+    </div>
+
+
+    <script>
+        function nandan(e, spanid, required) {
+            if (e.value == "") {
+                document.getElementById(spanid).innerHTML = required;
+
+            } else {
+                document.getElementById(spanid).innerHTML = "";
+
+            }
+        }
+
+
+
+        function checkemail(e) {
+            RegEx = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;// alpha only 
+            console.log(RegEx.test(e.value))
+            if (RegEx.test(e.value)) {
+                document.getElementById("emailerror").innerHTML = ""
+
+            } else {
+                document.getElementById("emailerror").innerText = "invalid email "
+
+            }
+
+        }
+
+
+        // date check function
+
+        function isFutureDate(idate) {
+            var today = new Date().getTime(),
+                idate = idate.split("/");
+
+            idate = new Date(idate[2], idate[1] - 1, idate[0]).getTime();
+            return (today - idate) < 0 ? true : false;
+        }
+
+        // your function
+        function checkDate(e, datewarn) {
+            dateReg = /(0[1-9]|[12][0-9]|3[01])[\/](0[1-9]|1[012])[\/](18|19|20)\d\d/;
+
+            if (dateReg.test(e.value)) {
+                if (isFutureDate(e.value)) {
+                    document.getElementById(datewarn).innerHTML = "Entered date is a future date";
+                    document.getElementById(datewarn).style.color = "red";
+                } else {
+                    document.getElementById(datewarn).innerHTML = "It's a valid date";
+                    document.getElementById(datewarn).style.color = "green";
+                }
+            } else {
+                document.getElementById(datewarn).innerHTML = "Invalid date!";
+                document.getElementById(datewarn).style.color = "red";
+            }
+        }
+    </script>
+</body>
+
+</html>

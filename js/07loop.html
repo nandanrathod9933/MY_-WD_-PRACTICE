@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loop</title>
+</head>
+
+<body>
+
+    <h3>Different Kinds of Loops</h3>
+
+    <p> JavaScript supports different kinds of loops: </p>
+    <ul>
+
+        <li> for - loops through a block of code a number of times</li>
+        <li> for/in - loops through the properties of an object</li>
+        <li> for/of - loops through the values of an iterable object</li>
+        <li> while - loops through a block of code while a specified condition is true</li>
+        <li> do/while - also loops through a block of code while a specified condition is true</li>
+    </ul>
+    <h3>for/in</h3>
+    <p>The for...in statement iterates over all enumerable string properties of an object (ignoring properties keyed by
+        symbols), including inherited enumerable properties.</p>
+    <h3>for/of</h3>
+    <p>The for...of statement executes a loop that operates on a sequence of values sourced from an iterable object.
+        Iterable objects include instances of built-ins such as Array, String, TypedArray, Map, Set, NodeList (and other
+        DOM collections), as well as the arguments object, generators produced by generator functions, and user-defined
+        iterables.
+
+    </p>
+
+    <script>
+        a = 50;
+        // console.log(a++);  // jyare pachad ++ lagva ma avse tyare ae aeni pachi ni value ma 1 ank no vadharo karse
+        // console.log(a);
+        // console.log(++a);  // jyare agad ++ lagva ma avse tyare ae aeni j value ma 1 no vadhor karse
+        // console.log(a);
+        // ++a;
+        // console.log(a);
+
+
+
+
+        // Entry Controlled Loop START
+
+        //  for loop
+        // for(init,condition,progress/process)
+
+        // for (let index = 0; index <= 20; index++) {
+        //     console.log("forloop", index);
+        //     // document.write("for loop ", index + "<br>")
+        // }
+
+
+        // The While Loop
+        // whievar = 0;
+        // while (whievar < 10) {
+        //     console.log(whievar);
+        //     whievar++;
+        // }
+
+
+
+        // foreach loop
+        const array = ["test", "something new", 123, 456, 789, true]
+        // console.log(array);
+        // console.log(array[0]);
+        // console.log(array[1]);
+        // console.log(array[2]);
+        // console.log(array[3]);
+        // console.log(array[4]);
+        // console.log(array[5]);
+        // array.forEach(element => {
+        //     console.log(element);
+        // });
+
+
+        // // for in object na j data lai jase khali
+        // const objectdata = { "maths": 90, "eng": 40, "computet": 99 }
+        // // for (const key in objectdata) {
+        // //     console.log(key);
+        // //     console.log(objectdata[key]);
+        // // }
+        // for (const key in objectdata) {
+        //     console.log(key);
+        //     console.log(objectdata[key]);
+        // }
+
+
+        //for of iterator value
+
+        // for (const iterator of array) {
+        //     // console.log(array); // akhu [ ] sathe akhi value lavse
+        //     console.log(iterator); // khali aeni andar ni value alag alag line ma lavse
+        // }
+
+
+        // Exit Controlled Loop START
+        dowhilevar = 1;
+        do {
+            console.log(dowhilevar);
+            dowhilevar++;
+        } while (dowhilevar < 10);
+
+
+
+        // pratice
+
+         // for (let raju = 5; raju <= 25; raju++) {   // index ni jagiya ae game ae name rakhi sakai
+        //     console.log(raju);
+        // }
+    </script>
+</body>
+
+</html>

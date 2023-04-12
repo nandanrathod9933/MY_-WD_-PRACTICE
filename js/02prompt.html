@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>prompt</title>
+</head>
+
+<body>
+
+    <h3>prompt</h3>
+    <p>A prompt box is often used if you want the user to input a value before entering a page.</p>
+    <p> When a prompt box pops up, the user will have to click either "OK" or "Cancel" to proceed after entering an
+        input value. </p>
+    <p> If the user clicks "OK" the box returns the input value. If the user clicks "Cancel" the box returns null.
+    </p>
+
+    <button onclick="myFunction()">confirm</button>
+    <p id="answer"></p>
+    <script>
+        function myFunction() {
+            let sum = prompt("5+5 =")
+            if (sum == 10) {
+                // document.write("true")
+                document.getElementById("answer").innerHTML = "true"
+            } else {
+                // document.write("flase")
+                document.getElementById("answer").innerHTML = "flase"
+
+
+            }
+        }
+    </script>
+</body>
+
+</html>

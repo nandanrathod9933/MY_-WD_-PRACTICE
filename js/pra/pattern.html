@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        for (let index = 0; index < 10; index++) {
+
+            console.log("outer loop", index);
+            for (let i = 0; i <= index; i++) {
+                // console.log(i);
+                document.write(" * ")
+                // document.write(+i, " ")
+                // document.write(index + " * ")
+
+            }
+
+            document.write("<br>")
+        }
+        document.write("<br> <br> <br>")
+
+        // 2
+        for (let index = 0; index <= 10; index++) {
+
+            for (let i = 0; i < 10 - index; i++) {
+                document.write(" *  ")
+
+            }
+
+            document.write("<br>")
+        }
+        document.write("<br> <br> <br>")
+
+
+        for (let index = 1; index <= 10; index++) {
+
+            for (let i = 0; i < 10 - index; i++) {
+                document.write(" &ensp;  ")
+
+            } for (let k = 0; k > index; k++) {
+                document.write(index + " ")
+            }
+
+            document.write("<br>")
+        }
+
+
+        // loop first
+        // for (let index = 0; index < 10; index++) {
+
+        //     console.log("outer loop", index);
+        //     for (let i = 0; i <= 10; i++) {
+        //         console.log("inner loop i", i);
+        //         // document.write("*")
+        //         // document.write(+i, " ")
+        //         document.write(index + " ")
+
+        //     }
+
+        //     document.write("<br>")
+        // }
+    </script>
+</body>
+
+</html>

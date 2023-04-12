@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <p>
+        <label>Date:</label>
+        <br />
+        <input type="text" name="date" id="date" placeholder="DD/MM/YYYY" onkeyup="checkDate(this, 'datewarn')" />
+    </p>
+    <span id="datewarn"></span>
+
+
+
+
+    <script>
+        function isFutureDate(idate) {
+            var today = new Date().getTime(),
+                idate = idate.split("/");
+
+            idate = new Date(idate[2], idate[1] - 1, idate[0]).getTime();
+            return (today - idate) < 0 ? true : false;
+        }
+        // your function
+        function checkDate(e, datewarn) {
+            // var idate = document.getElementById("date"),
+            // resultDiv = document.getElementById("datewarn"),
+            // dateReg = /(0[1-9]|[12][0-9]|3[01])[\/](0[1-9]|1[012])[\/]201[4-9]|20[0-9][0-9]/;
+            dateReg = /(0[1-9]|[12][0-9]|3[01])[\/](0[1-9]|1[012])[\/](18|19|20)\d\d/;
+
+            if (dateReg.test(e.value)) {
+                if (isFutureDate(e.value)) {
+                    document.getElementById(datewarn).innerHTML = "Entered date is a future date";
+                    document.getElementById(datewarn).style.color = "red";
+                    // resultDiv.innerHTML = "Entered date is a future date";
+                    // resultDiv.style.color = "red";
+                } else {
+                    document.getElementById(datewarn).innerHTML = "It's a valid date";
+                    document.getElementById(datewarn).style.color = "green";
+                    // resultDiv.innerHTML = "It's a valid date";
+                    // resultDiv.style.color = "green";
+                }
+            } else {
+                document.getElementById(datewarn).innerHTML = "Invalid date!";
+                document.getElementById(datewarn).style.color = "red";
+                // resultDiv.innerHTML = "Invalid date!";
+                // resultDiv.style.color = "red";
+            }
+        }
+    </script>
+</body>
+
+</html>

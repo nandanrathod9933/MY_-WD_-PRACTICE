@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GETHTMLDATA</title>
+</head>
+
+<body>
+    <h2>how to get html data in javascript</h2>
+    <input type="text" id="input-id" class="input-class" name="input-name">
+    <input type="text" id="input-id" class="input-class" name="input-name">
+
+    <button value="anything" onclick="btnclick(this)">click</button>
+
+
+    <h3>querySelector</h3>
+    <div>
+        <p>color red</p>
+    </div>
+
+
+    <h3>querySelectorall</h3>
+
+    <div>
+        <p class="color">color red</p>
+        <p class="color">color red</p>
+        <p class="color">color red</p>
+        <p class="color">color red</p>
+
+    </div>
+    <script>
+        let a = 50
+        let b = 60
+        // console.log(a + b);
+
+        let sum = a + b
+        // console.log(sum);
+        function btnclick(e) {
+            // console.log(e);  // btn click karta akhu input dekhadse khali aem name lakhiyu hase to
+            // console.log(e.value);  // btn click karta khali aeni value joti hoy to pachad value lakhi nakhva nu
+
+
+            // id thi call karva mate
+
+            // let inpData = document.getElementById("input-id")
+            // console.log(inpData);
+            // console.log(inpData.value);
+
+
+            // class thi call karva mate
+
+            // let inpdata = document.getElementsByClassName("input-class")
+            // console.log(inpdata);
+            // console.log(inpdata[0].value);
+            // console.log(inpdata[1].value);
+
+
+            // name thi call karva mat
+
+            // let inpdata = document.getElementsByName("input-name")
+            // console.log(inpdata);
+            // console.log(inpdata[0].value);
+            // console.log(inpdata[1].value);
+
+
+            // tag name thi call karva mate
+
+            // let inpdata = document.getElementsByTagName("input")
+            // console.log(inpdata);
+            // console.log(inpdata[0].value);
+            // console.log(inpdata[1].value);
+
+
+            // querySelector 
+            // let inpData = document.querySelector(".input-class");
+            // console.log(inpData);
+            // console.log(inpData.value);
+
+            // let query = document.querySelector("div > p").style.backgroundColor = "red";
+            // console.log("query");
+
+
+            // querySelectorAll 
+            // let inpData = document.querySelectorAll("input")
+            // console.log(inpData);
+            // console.log(inpData[0].value);
+            // console.log("called");
+
+
+        }
+
+
+    </script>
+</body>
+
+</html>

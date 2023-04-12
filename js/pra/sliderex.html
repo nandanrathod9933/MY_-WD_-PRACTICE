@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img {
+            width: 600px;
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+
+    <img src="../Image/img2.jpeg" class="sliderimg" alt="">
+    <img src="../Image/img4.jpeg" class="sliderimg" alt="">
+    <img src="../Image/img6.jpeg" class="sliderimg" alt="">
+    <img src="../Image/img8.jpeg" class="sliderimg" alt="">
+    <img src="../Image/img10.jpeg" class="sliderimg" alt="">
+    <img src="../Image/img12.jpeg" class="sliderimg" alt="">
+
+    <script>
+        let imgdata = document.getElementsByClassName('sliderimg');
+        // console.log(imgdata);
+        let stop = 0;
+        function slider() {
+            console.log(imgdata);
+
+            for (let index = 0; index < imgdata.length; index++) {
+                // console.log(index);
+                imgdata[index].style.display = "none"
+            }
+            if (stop >= imgdata.length) {
+                stop = 0
+            }
+            imgdata[stop].style.display = "block";
+            console.log("count :", stop)
+            stop++;
+        }
+
+        setInterval(slider, 2000);
+    </script>
+</body>
+
+</html>

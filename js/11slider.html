@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .slideranimation {
+            animation: slider 1s alternate;
+            position: relative;
+            /* animation-timing-function: ease-in-out; */
+        }
+
+        @keyframes slider {
+            from {
+                /* right: 900px; */
+                left: -1000px;
+            }
+
+            to {
+                /* right: 0; */
+                left: 400px;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="box">
+
+        <img src="./Image/img1.jpeg" class="slider-img" alt="">
+        <img src="./Image/img12.jpeg" class="slider-img" alt="">
+        <img src="./Image/img13.jpeg" class="slider-img" alt="">
+        <img src="./Image/img7.jpeg" class="slider-img" alt="">
+        <img src="./Image/img19.jpeg" class="slider-img" alt="">
+
+    </div>
+
+
+    <script>
+        let imagedata = document.getElementsByClassName('slider-img');
+        // console.log(imagedata);
+        let count = 0;
+        function Slider() {
+            console.log(imagedata);
+            for (let index = 0; index < imagedata.length; index++) {
+                // console.log(index);
+                imagedata[index].style.display = "none"
+                // document.getElementsByClassName('slider-img')[index].style.display = "none" 
+
+            }
+
+            if (count >= imagedata.length) {
+                count = 0
+            }
+
+            imagedata[count].style.display = "block";
+            console.log("count :", count);
+            count++;
+
+            // ImageData[0].style.display="none"
+            // ImageData[1].style.display="none"
+
+        }
+        setInterval(Slider, 1000);
+
+        // let ImageData = document.getElementsByClassName('slider-img');
+        // // console.log(ImageData);
+        // let count = 0;
+        // function Slider() {
+        //     console.log(ImageData);
+        //     for (let index = 0; index < ImageData.length; index++) {
+        //         console.log(index);
+        //         ImageData[index].style.display = "none"
+        //         console.log("element", ImageData[index].classList.remove("slideranimation"));
+        //         // document.getElementsByClassName('slider-img')[index].style.display="none"
+        //     }
+        //     if (count >= ImageData.length) {
+        //         count = 0
+        //     }
+        //     ImageData[count].style.display = "block"
+        //     console.log("Count : ", count);
+        //     console.log("element", ImageData[count].classList.add("slideranimation"));
+
+        //     count++;
+        //     // ImageData[0].style.display="none"
+        //     // ImageData[1].style.display="none"
+        //     setTimeout(Slider, 1000)
+        // }
+        // Slider()
+        // // setInterval(Slider, 3000);
+
+
+        function slideshow() {
+
+            setTimeout(function () {
+                backgroundElement.style.backgroundImage = "url('./Image/img1.jpeg')";
+                setTimeout(function () {
+                    backgroundElement.style.backgroundImage = "url('./Image/img1.jpeg')";
+                    setTimeout(function () {
+                        backgroundElement.style.backgroundImage = "url('./Image/img1.jpeg')";
+                        slideshow();
+                    }, 2000);
+                }, 2000);
+            }, 2000);
+        }
+
+        slideshow();
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        // *****
+        // *****
+        // *****
+        // *****
+        // *****
+
+        for (let i = 0; i < 5; i++) { // external loop
+            for (let v = 0; v < 5; v++) { // internal loop
+                document.write(" * ")
+
+            }
+            document.write("<br>")
+        }
+
+        document.write("<br>  <br> <br> ")
+
+
+
+        //  * * * * *
+        //   * * * * *
+        //    * * * * *
+        //     * * * * *
+        //      * * * * *
+
+
+        for (let i = 0; i < 5; i++) { // external loop
+            for (let j = 0; j < i; j++) {
+                document.write("&nbsp")
+
+            }
+            for (let j = 0; j < 5; j++) { // internal loop
+                document.write(" * ")
+
+            }
+            document.write("<br>")
+        }
+
+        document.write("<br>  <br> <br> ")
+
+
+        //         *
+        //       * *
+        //     * * *
+        //   * * * *
+        // * * * * *
+
+        for (let i = 1; i <= 5; i++) {
+            for (let j = 0; j < 5 - i; j++) {
+                document.write("&ensp; ")  // ensp two space apva mate conten
+            }
+            for (let k = 0; k < i; k++) {
+                document.write(" * ")
+            }
+            document.write("<br>")
+        }
+
+
+        document.write("<br>  <br> <br> ")
+        // * * * * *
+        // * * * *
+        // * * *
+        // * *
+        // *
+
+        for (let i = 0; i < 5; i++) {
+            for (let k = 0; k < 5 - i; k++) {
+                document.write(" * ")
+            }
+            document.write("<br>")
+        }
+
+
+        document.write("<br>  <br> <br> ")
+        // 0 0 0 0  0 0
+        // 1 1 1 1 1
+        // 2 2 2 2
+        // 3 3 3
+        // 4 4
+        // 5
+        for (let i = 0; i <= 5; i++) {
+            for (let k = 0; k <= 5 - i; k++) {
+                document.write(i + "  ")
+                // num++;
+            }
+            document.write("<br>")
+        }
+
+        document.write("<br>  <br> <br> ")
+
+
+        //         1
+        //       2 2
+        //     3 3 3
+        //   4 4 4 4
+        // 5 5 5 5 5
+
+        for (let i = 1; i <= 5; i++) {
+            for (let j = 0; j < 5 - i; j++) {
+                document.write("&ensp; ")  // ensp two space apva mate conten
+            }
+            for (let k = 0; k < i; k++) {
+                document.write(i + "  ")
+            }
+            document.write("<br>")
+        }
+    </script>
+</body>
+
+</html>

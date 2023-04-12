@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .box {
+            width: 80%;
+            margin: 30px auto;
+            height: 900px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .box img {
+            display: block;
+            width: 100%;
+        }
+
+        .silder {
+            position: absolute;
+            transition: 2s;
+
+        }
+
+        .btn {
+            /* margin-top: 360px; */
+            display: block;
+            text-align: center;
+            transform: translatex()
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <div class="box">
+            <img src="../Image/img14.jpeg" alt="" class="silder">
+            <img src="../Image/img15.jpeg" alt="" class="silder">
+            <img src="../Image/img16.jpeg" alt="" class="silder">
+            <img src="../Image/img17.jpeg" alt="" class="silder">
+            <img src="../Image/img18.jpeg" alt="" class="silder">
+        </div>
+    </main>
+
+    <div class="btn">
+        <button onclick="prv(-1)">prv</button>
+        <button onclick="next(1)">next</button>
+    </div>
+
+    <script>
+        let slider = document.querySelectorAll(".silder");
+        var count = 0;
+
+        slider.forEach(
+            (silder, index) => {
+                // console.log(silder);
+                silder.style.left = `${index * 100}%`
+            });
+
+        function prv(n) {
+            count += n;
+            raju();
+            // console.log(count);
+        }
+        function next(n) {
+            count += n;
+            raju();
+            // console.log(count);
+
+        }
+
+        function raju() {
+            if (count > slider.length - 1) {
+                count = 0;
+            }
+            // console.log(count);
+            if (count < 0) {
+                count = slider.length - 1;
+            }
+            console.log(count);
+
+            slider.forEach(
+                (slider) => {
+                    slider.style.transform = `translateX(-${count * 100}%)`
+                }
+            )
+        }
+    </script>
+
+</body>
+
+</html>

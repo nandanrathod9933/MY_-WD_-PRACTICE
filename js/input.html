@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="">
+        <div>
+            <input type="text" onblur="nandan(this,'error', 'this field required')">
+            <span id="error">*</span>
+        </div>
+        <div>
+            <input type="text" onblur="nandan(this,'ferror', 'this field new required')">
+            <span id="ferror">*</span>
+        </div>
+        <input type="search">
+    </form>
+    <script>
+        // function nandan(e, allerror, message) {
+        //     if (e.value == "") {
+        //         document.getElementById(allerror).innerHTML = message;
+        //     } else {
+        //         document.getElementById(allerror).innerHTML = "";
+        //     }
+        // }
+        function nandan(e, allerror, message) {
+            if (e.value != "") {
+                document.getElementById(allerror).innerHTML = '';
+            } else {
+                document.getElementById(allerror).innerHTML = message;
+            }
+        }
+    </script>
+</body>
+
+
+</html>
