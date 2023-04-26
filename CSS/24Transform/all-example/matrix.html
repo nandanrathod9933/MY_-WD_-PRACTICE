@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>transform matrix </title>
+    <style>
+        h3 {
+            background-color: rgba(13, 193, 213, 0.418);
+            border: 2px dotted rgba(82, 82, 185, 0.495);
+            text-transform: capitalize;
+            font-size: 20px;
+        }
+
+        img {
+            height: 200px;
+            width: 200px;
+
+        }
+
+        .matrix {
+            overflow: hidden;
+        }
+
+        img {
+            transition: all 10s;
+        }
+
+        img:hover {
+            /* transform: matrix(1, 2, 3, 4, 5, 6); */
+            transform: matrix(-5, -10, 0, 4, 285, 236);
+        }
+    </style>
+</head>
+
+<body>
+    <h3>matrix(n,n,n,n,n,n)</h3>
+    <p>Defines a 2D transformation, using a matrix of six values</p>
+    <div class="matrix">
+        <img src="./download.jpg" alt="">
+    </div>
+</body>
+
+</html>
