@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .col-25 {
+            width: 100%;
+        }
+
+        .box {
+            background-color: blueviolet;
+            height: 200px;
+            justify-content: center;
+            display: flex;
+            align-items: center;
+        }
+
+        .box p {
+            width: 100%;
+            text-align: center;
+
+        }
+
+
+        @media (min-width: 576px) {
+            .col-25 {
+                width: 100%;
+            }
+
+        }
+
+
+        @media (min-width: 768px) {
+            .col-25 {
+                width: 50%;
+            }
+
+            .container {
+                width: 700px;
+                margin: 0 auto;
+            }
+        }
+
+
+        @media (min-width: 992px) {
+            .col-25 {
+                width: 25%;
+            }
+
+            .container {
+                width: 900px;
+                margin: 0 auto;
+            }
+
+
+        }
+
+
+        @media (min-width: 1200px) {
+
+            .col-25 {
+                width: 25%;
+            }
+
+            .container {
+                width: 1100px;
+                margin: 0 auto;
+            }
+
+        }
+
+        @media (min-width: 1400px) {
+            .col-25 {
+                width: 25%;
+            }
+
+            .container {
+                width: 1300px;
+                margin: 0 auto;
+            }
+
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="container">
+
+
+        <div class="row">
+            <div class="col-25">
+                <div class="box">
+                    <p> box-1</p>
+                </div>
+            </div>
+            <div class="col-25">
+                <div class="box" style="background-color: orange;">
+                    <p> box-1</p>
+                </div>
+            </div>
+            <div class="col-25">
+                <div class="box" style="background-color: yellow;">
+                    <p> box-1</p>
+                </div>
+            </div>
+            <div class="col-25">
+                <div class="box" style="background-color: aqua;">
+                    <p> box-1</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
