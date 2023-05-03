@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .align {
+            align-items: center;
+        }
+
+        .pos_rel {
+            position: relative;
+        }
+
+        .pos_ab {
+            position: absolute;
+        }
+
+        .warrap_bg {
+            background-color: blue;
+        }
+
+        .col_100 {
+            width: 100%;
+        }
+
+        .logo img {
+            width: 20%;
+            display: block;
+            margin: 20px 0 40px 0;
+        }
+
+        .choose_img {
+            margin-left: auto;
+        }
+
+        .choose_img button {
+            display: block;
+            padding: 70px 30px;
+            border-radius: 10px;
+            margin: 0 10px;
+            background-color: rgb(255, 255, 255);
+        }
+
+        .add {
+            bottom: -40px;
+            left: 60px;
+        }
+
+        .add h2 {
+            color: #fff;
+            background-color: rgb(193, 69, 69);
+            font-size: 30px;
+            padding: 5px 30px;
+            text-transform: capitalize;
+            display: inline-block;
+            border-radius: 30px;
+
+        }
+
+        .form_no {
+            margin-top: 60px;
+        }
+
+        .input_box {
+            display: block;
+            margin: 20px 0;
+        }
+
+        .input_box label {
+            font-size: 18px;
+            text-transform: capitalize;
+            font-weight: 900;
+            padding: 0 10px;
+        }
+
+        .input_box input {
+            border: none;
+            outline: none;
+            border-bottom: 1px solid black;
+            padding: 5px;
+        }
+
+        .form_box_1 p {
+            color: rgb(219, 10, 10);
+            font-size: 20px;
+            text-transform: capitalize;
+            margin: 10px;
+
+        }
+
+        .office_use_box {
+            margin-left: auto;
+            width: 275px;
+            margin-right: 10px;
+            background-color: aliceblue;
+            border: 1px solid black;
+            border-radius: 10px;
+        }
+
+        .office_use_box h4 {
+            font-size: 18px;
+            text-transform: capitalize;
+            font-weight: 900;
+            background-color: blue;
+            color: #fff;
+            text-align: center;
+            border-radius: 20px;
+        }
+
+        .name_box {
+            display: flex;
+            /* justify-content: space-be; */
+
+        }
+
+        .main_form_box {
+            width: 80%;
+            margin: 0 auto;
+        }
+
+
+        .name_box span {
+            font-size: 20px;
+            text-transform: capitalize;
+            padding: 0 50px;
+        }
+
+        .input_box_1 {
+            display: flex;
+        }
+
+        .table_btn {
+            font-size: 20px;
+            font-weight: 900;
+            background-color: blue;
+            color: #fff;
+            padding: 5px 10px;
+            text-transform: capitalize;
+        }
+
+        .border_left {
+            border-top-left-radius: 10px;
+            border-bottom-left-radius: 10px;
+
+        }
+
+        .border_right {
+            border-top-right-radius: 10px;
+            border-bottom-right-radius: 10px;
+        }
+
+        form {
+            width: 90%;
+            margin: 10px auto;
+            border: 2px solid black;
+            padding: 3px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="" method="post">
+        <div class="warrap_bg pos_rel">
+
+            <div class="row align">
+                <div class="col">
+                    <div class="logo">
+                        <img src="./0-6.png" alt="">
+                    </div>
+                </div>
+                <div class="col choose_img">
+
+                    <input type='file' id="getFile" style="display:none">
+                    <button class="file_btn" onclick="document.getElementById('getFile').click()">affix child's
+                        photo</button>
+                    <input type='file' id="getFile" style="display:none">
+                </div>
+            </div>
+            <div class="add pos_ab">
+                <h2>admission form</h2>
+                <p>(Nursery, Jr KG, Sr KG, English Medium)</p>
+            </div>
+        </div>
+        <div class="row form_no">
+            <div class="form_box_1">
+
+                <div class="nan row">
+
+
+                    <div class="row input_box">
+                        <label for="no">form no:</label>
+                        <input type="text" id="no">
+                    </div>
+                    <div class="row input_box">
+                        <label for="add">admission for std :</label>
+                        <input type="text" id="add">
+                    </div>
+                </div>
+
+
+                <p>please fill each details in BLOCK LITTERS</p>
+            </div>
+
+            <div class="office_use_box">
+                <h4>for office use</h4>
+                <div class="row input_box">
+                    <label for="fr">f.r.no :</label>
+                    <input type="text" id="fr">
+                </div>
+                <div class="row input_box">
+                    <label for="std">std :</label>
+                    <input type="text" id="std">
+                </div>
+                <div class="row input_box">
+                    <label for="amount">amount :</label>
+                    <input type="text" id="amount">
+                </div>
+                <div class="row input_box">
+                    <label for="sign">sign :</label>
+                    <input type="text" id="sign">
+                </div>
+                <div class="row input_box">
+                    <label for="date">date :</label>
+                    <input type="date" id="date">
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+        <div class="main_form_box">
+            <div class="row input_box">
+                <label for="name">name :</label>
+                <small>
+                    <input type="text" id="name" size="95">
+                    <span class="name_box">
+                        <span style="margin-left: 80px;">(first name)</span>
+                        <span>(secound name)</span>
+                        <span>(last name)</span>
+                    </span>
+                </small>
+            </div>
+            <div class="row input_box">
+                <label for="mf">mother's name :</label>
+                <input type="text" id="mf" size="95">
+            </div>
+
+            <div class="input_box_1">
+                <div class="row input_box">
+                    <label for="bd">Date of Birth:</label>
+                    <input type="text" id="bd" size="50">
+                </div>
+                <div class="row input_box">
+                    <label for="bd">Male</label>
+                    <input type="radio" name="Gender" value="Male" />
+                    <label for="bd">Female</label>
+                    <input type="radio" name="Gender" value="Female" />
+                </div>
+
+            </div>
+            <div class="input_box_1">
+                <div class="row input_box">
+                    <label for="rellgion">rellgion :</label>
+                    <input type="text" id="rellgion" size="50">
+                </div>
+
+                <div class="row input_box">
+                    <label for="Caste">Caste :</label>
+                    <input type="text" id="Caste" size="50">
+                </div>
+            </div>
+            <div class="row input_box">
+                <label for="place">place of residence :</label>
+                <input type="text" id="place" size="95">
+                <input type="text" id="place" size="95" style="margin-left: 180px;">
+            </div>
+            <div class="input_box_1">
+                <div class="row input_box">
+                    <label for="area">area :</label>
+                    <input type="text" id="area" size="50">
+                </div>
+
+                <div class="row input_box">
+                    <label for="code">pin code :</label>
+                    <input type="text" id="code" size="50">
+                </div>
+            </div>
+            <div class="input_box_1">
+                <div class="row input_box">
+                    <label for="phone">phone (R) :</label>
+                    <input type="tel" id="phone" size="50">
+                </div>
+
+                <div class="row input_box">
+                    <label for="Email">Email :</label>
+                    <input type="Email" id="Email" size="50">
+                </div>
+
+            </div>
+            <div class="row input_box">
+                <label for="card_number">AdharCard Number</label>
+                <input id="card_number" class="form-control" required pattern="(\d{4}\s?){4}"
+                    placeholder="&#8226;&#8226;&#8226;&#8226; &#8226;&#8226;&#8226;&#8226; &#8226;&#8226;&#8226;&#8226; &#8226;&#8226;&#8226;&#8226;"
+                    maxlength="19" size="95">
+            </div>
+
+            <div class="table_box">
+                <table style="border-spacing: 10px;">
+                    <tr>
+                        <td class="table_btn  border_left">detail</td>
+                        <td class="table_btn">father</td>
+                        <td class="table_btn border_right">mother</td>
+                    </tr>
+                    <tr>
+                        <td class="table_btn  border_left">name</td>
+                        <td><input type="text" size="30"></td>
+                        <td><input type="text" size="30"></td>
+                    </tr>
+                    <tr>
+                        <td class="table_btn  border_left">qualification</td>
+                        <td><input type="text" size="30"></td>
+                        <td><input type="text" size="30"></td>
+                    </tr>
+                    <tr>
+                        <td class="table_btn  border_left">occupation</td>
+                        <td><input type="text" size="30"></td>
+                        <td><input type="text" size="30"></td>
+                    </tr>
+                    <tr>
+                        <td class="table_btn  border_left">office address</td>
+                        <td><input type="text" size="30"></td>
+                        <td><input type="text" size="30"></td>
+                    </tr>
+                    <tr>
+                        <td class="table_btn  border_left">mobile</td>
+                        <td><input type="text" size="30"></td>
+                        <td><input type="text" size="30"></td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="table_box">
+                <table style="border-spacing: 10px;">
+                    <tr>
+                        <td class="table_btn  border_left">Name of Brother / Sister</td>
+                        <td class="table_btn">Std.</td>
+                        <td class="table_btn border_right">Name of the School</td>
+                    </tr>
+                    <tr>
+                        <td><input type="text" size="30"></td>
+                        <td><input type="text" size="15"></td>
+                        <td><input type="text" size="30"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="text" size="30"></td>
+                        <td><input type="text" size="15"></td>
+                        <td><input type="text" size="30"></td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="row input_box">
+                <label for="ps"> name of the previous of School:</label>
+                <input type="text" id="ps" size="100">
+            </div>
+            <div class="input_box_1">
+                <div class="row input_box">
+                    <label for="std">std :</label>
+                    <input type="text" id="std" size="50">
+                </div>
+
+                <div class="row input_box">
+                    <label for="result">result (%) / Grade :</label>
+                    <input type="text" id="result" size="50">
+                </div>
+
+            </div>
+            <div class="input_box_1">
+                <div class="row input_box">
+                    <label for="da">date :</label>
+                    <input type="text" id="da" size="50">
+                </div>
+
+                <div class="row input_box">
+                    <label for="ps">praent's sign</label>
+                    <input type="text" id="ps" size="50">
+                </div>
+
+            </div>
+
+            <div class="input_box" style="text-align: center;">
+                <button type="submit" class="table_btn">submit</button>
+                <button type="reset" class="table_btn" style="background-color: red;">reset</button>
+            </div>
+        </div>
+    </form>
+</body>
+
+</html>
