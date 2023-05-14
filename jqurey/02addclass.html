@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        h1 {
+            font-size: 30px;
+            text-transform: uppercase;
+            margin: 10px;
+            word-spacing: 10px;
+        }
+
+        .box {
+            width: 300px;
+            background-color: brown;
+            padding: 20px;
+            margin: 10px;
+
+        }
+
+        button {
+            margin: 10px;
+
+        }
+
+        .active {
+            background-color: violet;
+        }
+    </style>
+</head>
+
+<body>
+    <h1> addclass, removeClass, hasClass, toggleClass</h1>
+    <div class="box">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti praesentium omnis deserunt illum porro
+            incidunt veritatis quaerat, quisquam ipsum velit fuga sapiente cupiditate possimus officia accusantium magni
+            eveniet consequuntur sunt. Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis nihil nisi odit
+            quas excepturi eligendi. Ea, voluptas quis delectus cupiditate praesentium iusto nulla sit, culpa optio, eum
+            nisi eos itaque?
+        </p>
+    </div>
+    <button id="btn"> JavaScript click</button>
+    <button id="addbtn"> Addclass click</button>
+    <button id="removebtn"> Remove click</button>
+    <button id="togglebtn"> Toggle click</button>
+    <!-- <button id="togglebtn"> toggle click</button> -->
+
+    <script>
+        document.getElementById("btn").addEventListener("click", function (params) {
+            document.getElementsByClassName("box").classList.add("active")
+
+        })
+        
+        $('#addbtn').click(function () {
+            $(".box").addClass('active')
+        })
+        $('#removebtn').click(function () {
+            $(".box").removeClass('active')
+        })
+
+        $('#togglebtn').click(function () {
+            $(".box").hasClass("active");
+            $(".box").toggleClass("active")
+        })
+    </script>
+</body>
+
+</html>
