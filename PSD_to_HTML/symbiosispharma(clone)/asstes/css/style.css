@@ -1,0 +1,599 @@
+@font-face {
+    font-family: "Montserrat";
+    src: url('../font/Montserrat-VariableFont_wght.ttf');
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat";
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.justify_content_space_between {
+    justify-content: space-between;
+}
+
+.aling_items_center {
+    align-items: center;
+}
+
+.col_100 {
+    width: 100%;
+}
+
+.col_30 {
+    width: 30%;
+}
+
+.col_50 {
+    width: 50%;
+}
+
+.col_40 {
+    width: 40%;
+}
+
+.col_20 {
+    width: 20%;
+}
+
+.col_60 {
+    width: 60%;
+}
+
+/* header */
+header {
+    width: 100%;
+    position: fixed;
+    background-color: #ffffff;
+    border-bottom: 2px solid rgba(226, 226, 226);
+    padding: 20px 0;
+    z-index: 99999;
+}
+
+.h_logo img {
+    width: 40%;
+}
+
+.h_list ul li {
+    list-style: none;
+    display: inline-block;
+    padding: 0 20px;
+}
+
+.h_list ul li a {
+    font-family: Montserrat;
+    font-weight: 600;
+    font-size: 14px;
+    letter-spacing: 0px;
+    font-style: normal;
+    color: #000000;
+    text-transform: uppercase;
+}
+
+.h_list ul li a:hover {
+    color: #14919d;
+}
+
+.h_list ul li a::after {
+    content: '';
+    width: 100%;
+    height: 0.5px;
+    background-color: #14919d;
+    display: block;
+    transform: scaleX(0);
+    transition: transform 0.5s ease-in-out;
+    transform-origin: right;
+    margin-top: 3px;
+}
+
+.h_list ul li a:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+.margin {
+    padding-top: 95px;
+}
+
+/* section 2  */
+.se_2 {
+    padding: 40px 0;
+    background-color: #f2f8ff;
+}
+
+
+.main_services:nth-child(1) {
+    text-align: center;
+    margin: 10px 0;
+    color: #14919d;
+}
+
+.main_services h2 {
+    margin: 10px 0;
+    font-size: 40px;
+    color: rgb(54, 52, 53);
+    line-height: 1.2;
+}
+
+.se_2_box {
+    margin: 40px 0;
+}
+
+.services_box {
+    width: 100%;
+    background-color: #ffffff;
+}
+
+.services_box_img {
+    overflow: hidden;
+}
+
+
+.services_box_img img {
+    opacity: 1;
+    transition: opacity 1s, transform 1s;
+}
+
+.services_box_img img:hover {
+    opacity: .9;
+    transform: scale3d(1.1, 1.1, 1);
+}
+
+.services_box_text {
+    background: url('../img/cards-bg.png');
+    background-repeat: no-repeat;
+    background-color: #fff;
+    box-shadow: 0 5px 40px 0 rgb(0 0 0 / 11%);
+    background-position: center center;
+    padding: 20px;
+    text-align: center;
+}
+
+.serv_icon {
+    background: #17929d;
+    position: relative;
+    margin: 0 auto;
+    margin-top: -50px;
+    max-width: 100px !important;
+    height: 100px;
+    line-height: 90px;
+    border-radius: 50%;
+    padding: 5px;
+    z-index: 99;
+}
+
+.serv_icon::before {
+    content: '';
+    border: 2px dashed #000;
+    position: absolute;
+    left: -10%;
+    border-radius: 50%;
+    top: -10%;
+    width: 120%;
+    height: 120%;
+}
+
+.serv_icon img {
+    width: 66px;
+    padding-top: 10px;
+}
+
+.services_box_text h3 {
+    color: rgb(40, 21, 110);
+    font-weight: 600;
+    font-size: 19px;
+    text-align: center;
+    margin: 40px 0 20px 0;
+}
+
+/* section 2  */
+
+.ab_se_2 {
+    padding: 80px 0;
+}
+
+.ab_se_2_img {
+    overflow: hidden;
+}
+
+.ab_se_2_img img {
+    display: block;
+    width: 100%;
+    opacity: 1;
+    transition: opacity 1s, transform 1s;
+}
+
+.ab_se_2_img img:hover {
+    opacity: .9;
+    transform: scale3d(1.1, 1.1, 1);
+}
+
+.ab_se_2_text {
+    width: 85%;
+    margin: 0 auto;
+    font-family: "Montserrat";
+}
+
+.ab_se_2_text h4 {
+    font-size: 32px;
+    letter-spacing: 1px;
+    color: rgb(54, 52, 53);
+}
+
+
+
+.ab_se_2_text p {
+    padding: 10px 0;
+    font-size: 15px;
+    line-height: 23px;
+    color: #222222;
+}
+
+.ab_se_2_text h5 {
+    font-size: 16px;
+    padding: 7px 0;
+    color: #14919d;
+}
+
+.ab_se_2_text img {
+    width: 15%;
+    margin: 15px 0;
+}
+
+/* section */
+
+
+.se_4 {
+    background-color: rgba(255, 255, 255);
+    background-image: url('../img/shape-2.png');
+    background-position: left bottom;
+    background-repeat: no-repeat;
+    background-size: 40%;
+    background-attachment: fixed;
+    height: 90vh;
+    padding: 40px 0;
+}
+
+.capabilities {
+    text-align: center;
+}
+
+.capabilities h2 {
+    margin: 10px 0;
+    font-size: 40px;
+    color: rgb(54, 52, 53);
+    line-height: 1.2;
+    text-align: center;
+}
+
+.capabilities img {
+    margin: 10px 0;
+}
+
+.se_4_ma {
+    margin: 40px 0;
+}
+
+.se_4_box {
+    background: url('../img/cards-bg.png');
+    background-color: #f2f8ff;
+    padding: 30px;
+    text-align: center;
+    box-shadow: 0 0 10px 0 rgb(0 43 92 / 8%);
+}
+
+.se_4_box_img img {
+    width: 50%;
+    border-radius: 50%;
+}
+
+.se_4_box_text h3 {
+    font-size: 20px;
+    color: rgb(40, 21, 110);
+    font-weight: 600;
+    line-height: 30px;
+    margin: 20px 0;
+}
+
+/* section */
+
+.se_5 {
+    background-color: rgba(255, 255, 255);
+    background-image: url('../img/team.jpg');
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 89vh;
+}
+
+.export_box {
+    background-position: left top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: rgba(41, 22, 112, 0.7);
+    padding: 150px 50px;
+}
+
+.export_box h3 {
+    color: rgb(255, 255, 255);
+    font-size: 52px;
+    line-height: 1.3;
+}
+
+.export_box p {
+    padding: 20px 0;
+    font-size: 16px;
+    line-height: 23px;
+    color: #fff;
+}
+
+/* section */
+.se_6 {
+    background-color: #f2f8ff;
+    background-position: center center;
+    background-repeat: no-repeat;
+    padding: 50px 0;
+}
+
+.fact_box {
+    text-align: center;
+}
+
+.fact_box h2 {
+    font-size: 40px;
+    color: rgb(54, 52, 53);
+    line-height: 1.2;
+    margin: 10px 0;
+}
+
+.se_5_ma {
+    margin: 50px 0;
+}
+
+.experience_box {
+    text-align: center;
+}
+
+.experience_box p i,
+.experience_box p span {
+    display: block;
+}
+
+.experience_box p i {
+    font-size: 50px;
+    color: #0a8f9f;
+    margin: 10px 0;
+}
+
+.experience_box p span {
+    font-size: 40px;
+    color: #222;
+    font-weight: 600;
+    margin: 10px 0;
+}
+
+.experience_box .bold {
+    color: #000000;
+    font-size: 16px;
+    text-transform: capitalize;
+}
+
+.my_slider {
+    background-color: #fff;
+    margin: 50px 0;
+}
+
+
+/* section */
+.se_7 {
+    background-color: rgba(255, 255, 255);
+    background-image: url('../img/bg3.jpg');
+    background-position: left bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 79vh;
+}
+
+.symbiosis_box {
+    margin-left: auto;
+    width: 40%;
+    background-position: left top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: rgba(212, 41, 30, 0.6);
+    padding: 150px 50px;
+}
+
+.symbiosis_box h3 {
+    color: rgb(255, 255, 255);
+    font-size: 52px;
+    line-height: 1.3;
+}
+
+.symbiosis_box p {
+    padding: 30px 0;
+    font-size: 16px;
+    line-height: 23px;
+    color: #fff;
+}
+
+/* section 8 */
+.se_8 {
+    background-color: #f2f8ff;
+    background-position: center center;
+    background-repeat: no-repeat;
+    padding: 50px 0;
+}
+
+.my_slider img {
+    display: block;
+    max-width: 300px;
+    padding: 0 20px;
+    max-height: 120px;
+}
+
+.slick-prev::before,
+.slick-next::before {
+    color: rgb(54, 52, 53) !important;
+    font-size: 24px !important;
+}
+
+/* section 9 */
+.se_9 {
+    background-color: rgba(255, 255, 255);
+    background-image: url('../img/sec_9.jpg');
+    background-position: left bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 85vh;
+}
+
+.symbiosis_events {
+    /* margin-left: auto; */
+    width: 40%;
+    background-position: left top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: rgba(245, 103, 3, 0.5);
+    padding: 150px 50px 120px 50px;
+}
+
+.symbiosis_events h3 {
+    color: rgb(255, 255, 255);
+    font-size: 52px;
+    line-height: 1.3;
+}
+
+.symbiosis_events p {
+    padding: 30px 0;
+    font-size: 16px;
+    line-height: 23px;
+    color: #fff;
+}
+
+.btn_event {
+    padding-top: 28px;
+}
+
+.btn_event a {
+    color: #fff;
+    border: 2px solid;
+    padding: 13px 26px;
+    font-size: 17px;
+    font-weight: bold;
+    transition-property: color, background-color, border-color;
+    transition-duration: .2s;
+    transition-timing-function: linear;
+}
+
+.btn_event a:hover {
+    color: #190367;
+    padding: 13px 26px;
+    background: #fff;
+}
+
+/* footer  */
+.footer_sec {
+    padding: 40px 0;
+    background: url(https://symbiosispharma.in/wp-content/uploads/2020/08/footer-pattern.png);
+    background-color: #22262e;
+    color: #ffff;
+}
+
+.foot_first h4 {
+    padding: 20px 0;
+    font-size: 22px;
+}
+
+.foot_first ul li {
+    display: flex;
+    list-style: none;
+    padding: 6px 0;
+    cursor: pointer;
+    transition: all 0.4s ease-in-out;
+}
+
+.foot_first ul li:hover {
+    padding-left: 8px;
+}
+
+.foot_first ul li a {
+    color: #fff;
+    font-size: 14px;
+    display: inline-block;
+}
+
+.foot_first span {
+    display: block;
+    width: 70%;
+}
+
+.foot_first i {
+    display: block;
+    padding-right: 15px;
+}
+
+
+
+
+/* about page start  */
+/* <!-- ----section-1------ --> */
+.ab_se_1 {
+    background-image: url("../img/aboutimg.jpg");
+    background-size: cover;
+    height: 210px;
+    width: 100%;
+    padding: 50px 0;
+}
+
+.ab_se_1_text {
+    text-align: center;
+}
+
+.ab_se_1_text h1 {
+    font-size: 45px;
+    padding: 5px 0;
+    font-weight: bolder;
+    letter-spacing: 2px;
+    color: rgb(54, 52, 53);
+}
+
+.ab_se_1_text p {
+    letter-spacing: 1px;
+}
+
+/* about section 3 */
+.ab_sec_3 {
+    background-color: #e2e2e2;
+    padding: 50px 0;
+}
+
+/* about section 4 */
+.ab_se_4 {
+    padding: 80px 0;
+}
+
+.ab_se_4_img img {
+    display: block;
+    width: 60%;
+}

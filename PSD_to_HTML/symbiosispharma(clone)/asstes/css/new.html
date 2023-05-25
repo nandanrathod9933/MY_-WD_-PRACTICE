@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick-theme.min.css">
+    <style>
+        body {
+            background: #ccc;
+        }
+
+
+
+
+        .main img {
+            width: 10%;
+            /* height: 200px; */
+            margin: 0 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <!-- <div class="slider slider-for">
+            <div>
+                <h3>1</h3>
+            </div>
+            <div>
+                <h3>2</h3>
+            </div>
+            <div>
+                <h3>3</h3>
+            </div>
+            <div>
+                <h3>4</h3>
+            </div>
+            <div>
+                <h3>5</h3>
+            </div>
+        </div> -->
+        <div class=" variable-width">
+            <img src="../img/third-party-logo-11.jpg" alt="">
+            <img src="../img/third-party-logo-12.jpg" alt="">
+            <img src="../img/third-party-logo-13.jpg" alt="">
+            <img src="../img/third-party-logo-14.jpg" alt="">
+            <img src="../img/third-party-logo-15.jpg" alt="">
+            <img src="../img/third-party-logo-16.jpg" alt="">
+            <img src="../img/third-party-logo-17.jpg" alt="">
+            <img src="../img/third-party-logo-18.jpg" alt="">
+            <img src="../img/third-party-logo-19.jpg" alt="">
+            <img src="../img/third-party-logo-20.jpg" alt="">
+            <img src="../img/third-party-logo-21.jpg" alt="">
+            <!-- <div>
+                <h3>1</h3>
+            </div>
+            <div>
+                <h3>2</h3>
+            </div>
+            <div>
+                <h3>3</h3>
+            </div>
+            <div>
+                <h3>4</h3>
+            </div>
+            <div>
+                <h3>5</h3>
+            </div>
+            <div>
+                <h3>5</h3>
+            </div>
+            <div>
+                <h3>5</h3>
+            </div>
+            <div>
+                <h3>1</h3>
+            </div>
+            <div>
+                <h3>2</h3>
+            </div>
+            <div>
+                <h3>3</h3>
+            </div>
+            <div>
+                <h3>4</h3>
+            </div>
+            <div>
+                <h3>5</h3>
+            </div>
+            <div>
+                <h3>5</h3>
+            </div>
+            <div>
+                <h3>5</h3>
+            </div> -->
+        </div>
+        <div class="action">
+            <a href="#" data-slide="3">go to slide 3</a>
+            <a href="#" data-slide="4">go to slide 4</a>
+            <a href="#" data-slide="5">go to slide 5</a>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <script>
+
+        $('.variable-width').slick({
+            dots: false,
+            infinite: true,
+            speed: 300,
+            slidesToShow: 1,
+            centerMode: true,
+            variableWidth: true
+        });
+    </script>
+    <!-- <script>
+        $('.responsive').slick({
+            dots: true,
+            infinite: false,
+            speed: 300,
+            slidesToShow: 4,
+            slidesToScroll: 4,
+            responsive: [
+                {
+                    breakpoint: 1024,
+                    settings: {
+                        slidesToShow: 3,
+                        slidesToScroll: 3,
+                        infinite: true,
+                        dots: true
+                    }
+                },
+                {
+                    breakpoint: 600,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 2
+                    }
+                },
+                {
+                    breakpoint: 480,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1
+                    }
+                }
+                // You can unslick at a given breakpoint now by adding:
+                // settings: "unslick"
+                // instead of a settings object
+            ]
+        });
+
+    </script> -->
+    <!-- <script>
+        $('.slider-for').slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            arrows: false,
+            fade: true,
+            asNavFor: '.slider-nav'
+        });
+        $('.slider-nav').slick({
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            asNavFor: '.slider-for',
+            dots: true,
+            // focusOnSelect: true,
+            // arrows: false,
+            // fade: true,
+
+        });
+
+        $('a[data-slide]').click(function (e) {
+            e.preventDefault();
+            var slideno = $(this).data('slide');
+            $('.slider-nav').slick('slickGoTo', slideno - 1);
+        });
+    </script> -->
+</body>
+
+</html>
