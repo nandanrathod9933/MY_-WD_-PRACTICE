@@ -561,9 +561,12 @@ header {
 .ab_se_1 {
     background-image: url("../img/aboutimg.jpg");
     background-size: cover;
-    height: 210px;
+    background-repeat: no-repeat;
     width: 100%;
-    padding: 50px 0;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-origin: border-box;
+    padding: 90px 0;
 }
 
 .ab_se_1_text {
@@ -596,4 +599,54 @@ header {
 .ab_se_4_img img {
     display: block;
     width: 60%;
+}
+
+
+
+
+
+/* division page start */
+
+.divison_logo {
+    margin: 40px 0;
+    text-align: center;
+}
+
+.table_box {
+    margin: 50px 0;
+}
+
+.table_box table {
+    width: 100%;
+    border: 1px solid #92d9df;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+.table_box table td {
+    padding: 12px 6px !important;
+
+}
+
+.table_box table .style_1 {
+    color: #138b95;
+    text-align: center;
+    font-size: 26px;
+    font-weight: bold;
+    padding: 20px 0;
+}
+
+.table_box table .style_3 {
+    background: #7ddfe7;
+    font-weight: bold;
+}
+
+.table_box table .style_3 td,
+.table_box table .style_2 td {
+    border: 1px solid #92d9df;
+    padding: 12px;
+    text-align: center;
+    font-size: 15px;
+    /* height: 15pt; */
+    border-top: none;
 }
