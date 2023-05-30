@@ -1,0 +1,150 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            list-style: none;
+            text-decoration: none;
+        }
+
+        .container {
+            width: 90%;
+            margin: 0 auto;
+        }
+
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+
+
+        .box {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        #sidebar {
+            display: block;
+            background-color: brown;
+            height: 100%;
+            position: fixed;
+            transform: translate(0);
+            width: 20%;
+            min-width: 20%;
+            transition: all .5s ease-in-out;
+            overflow-x: hidden;
+            overflow-y: auto;
+            z-index: 999;
+        }
+
+        .sidemenu {
+            padding: 30px;
+            text-align: center;
+        }
+
+        .sidemenu ul li a {
+            color: blanchedalmond;
+            font-size: 18px;
+            line-height: 36px;
+        }
+
+        #main {
+            width: 80%;
+            margin-left: auto;
+            transition: all .5s ease-in-out;
+        }
+
+        #sidebar.sidebaractive {
+            transform: translate(-100%);
+        }
+
+        #main.mainactive {
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+
+    <aside id="sidebar">
+        <div class="sidemenu">
+
+            <ul>
+                <li><a href="#">home</a></li>
+                <li><a href="#">home</a></li>
+                <li><a href="#">home</a></li>
+                <li><a href="#">home</a></li>
+                <li><a href="#">home</a></li>
+                <li><a href="#">home</a></li>
+                <li><a href="#">home</a></li>
+                <li><a href="#">home</a></li>
+                <li><a href="#">home</a></li>
+                <li><a href="#">home</a></li>
+                <li><a href="#">home</a></li>
+                <li><a href="#">home</a></li>
+                <li><a href="#">home</a></li>
+                <li><a href="#">home</a></li>
+                <li><a href="#">home</a></li>
+                <li><a href="#">home</a></li>
+                <li><a href="#">home</a></li>
+                <li><a href="#">home</a></li>
+                <li><a href="#">home</a></li>
+                <li><a href="#">home</a></li>
+                <li><a href="#">home</a></li>
+                <li><a href="#">home</a></li>
+                <li><a href="#">home</a></li>
+                <li><a href="#">home</a></li>
+                <li><a href="#">home</a></li>
+                <li><a href="#">home</a></li>
+                <li><a href="#">home</a></li>
+                <li><a href="#">home</a></li>
+            </ul>
+        </div>
+    </aside>
+
+
+
+
+
+    <main id="main">
+        <h2 id="btnclick"><i class="fa-solid fa-times"></i></h2>
+
+    </main>
+
+    <script>
+        const sidebar = document.getElementById('sidebar');
+        const btnclick = document.getElementById('btnclick');
+        const main = document.getElementById('main');
+
+        btnclick.addEventListener('click', () => {
+            sidebar.classList.toggle('sidebaractive');
+            main.classList.toggle("mainactive")
+        })
+
+
+        let icon = btnclick.querySelector(".fa-times");
+        btnclick.onclick = function () {
+            if (icon.classList.contains("fa-times")) {
+                icon.classList.replace("fa-times", "fa-bars");
+            } else {
+                icon.classList.replace("fa-bars", "fa-times");
+            }
+        }
+    </script>
+</body>
+
+</html> -->
+
+

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <p>select</p>
+        <select name="browser" multiple>
+            <option value="firefox">Firefox</option>
+            <option value="ie">IE</option>
+            <option value="chrome">Chrome</option>
+            <option value="opera">Opera</option>
+            <option value="safari">Safari</option>
+        </select>
+    </div>
+    <br>
+    <div>
+        <p>datalist</p>
+        <p>The <code>&lt;datalist&gt;</code> tag specifies a list of pre-defined options for an
+            &lt;input&gt; element.</p>
+        <p>The <code>&lt;datalist&gt;</code> tag is used to provide an "autocomplete" feature
+            for &lt;input&gt;
+            elements. Users will see a drop-down list of pre-defined options as they input data.</p>
+        <p>The <code>&lt;datalist&gt;</code> element's id attribute
+            must be equal to the &lt;input&gt; element's list attribute (this binds them
+            together).</p>
+        <input type="text" list="browsers">
+        <datalist id="browsers">
+            <option value="Firefox">
+            <option value="IE">
+            <option value="Chrome">
+            <option value="Opera">
+            <option value="Safari">
+        </datalist>
+    </div>
+</body>
+
+</html>
