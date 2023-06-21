@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* .container {
+            width: 1200px;
+            margin: 0 auto;
+        }
+
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .col_50 {
+            width: 50%;
+        } */
+
+        .title {
+
+            position: relative;
+            padding-bottom: 1rem !important;
+            margin-bottom: 3rem !important;
+        }
+
+        .title::before {
+            position: absolute;
+            content: "";
+            width: 100px;
+            height: 5px;
+            left: 0;
+            bottom: 0;
+            background: #06A3DA;
+            border-radius: 2px;
+        }
+
+        .title::after {
+
+            position: absolute;
+            content: "";
+            width: 6px;
+            height: 5px;
+            bottom: 0px;
+            background: #fff;
+            animation: nudge 5s linear infinite alternate;
+
+        }
+
+        @keyframes nudge {
+
+            0%,
+            100% {
+                transform: translate(0);
+            }
+
+            50% {
+                transform: translate(100px);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div style="width: 100px;">
+
+        <div class="title">
+            <h1>The Best IT Solution With 10 Years of Experience</h1>
+            <h5>About Us</h5>
+        </div>
+    </div>
+
+</body>
+
+</html>

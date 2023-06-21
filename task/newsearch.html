@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style src="./asstes/css/style.css"></style>
+    <style>
+        .trigger {
+            text-align: center;
+            padding: 7px 13px;
+            background: #3e3e3e;
+            color: #fff;
+            font-size: 15px;
+            outline: none;
+            border: none;
+            border-radius: 5px;
+            font-family: cursive;
+        }
+
+        .modal {
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            opacity: 0;
+            visibility: hidden;
+            transform: scale(1.1);
+            transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
+        }
+
+        .modal-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            /* background-color: white; */
+            padding: 1rem 1.5rem;
+            width: 24rem;
+            border-radius: 0.5rem;
+        }
+
+        .close-button {
+            float: right;
+            width: 1.5rem;
+            line-height: 1.5rem;
+            text-align: center;
+            cursor: pointer;
+            border-radius: 0.25rem;
+            background-color: lightgray;
+        }
+
+        .close-button:hover {
+            background-color: darkgray;
+        }
+
+
+        .show-modal {
+            opacity: 1;
+            visibility: visible;
+            transform: scale(1.0);
+            transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
+        }
+
+
+        .search_box {
+            display: flex;
+            align-items: center;
+        }
+
+        .search_box input {
+            background: transparent;
+            padding: 10px;
+            border-color: #06A3DA !important;
+            display: block;
+            width: 100%;
+            padding: 0.375rem 0.75rem;
+            font-size: 1rem;
+            font-weight: 400;
+            line-height: 1.5;
+            color: #6B6A75;
+            background-color: #fff;
+            background-clip: padding-box;
+            border: 1px solid #ced4da;
+            appearance: none;
+            border-radius: 2px;
+            transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+        }
+
+        .btn {
+            background-color: #06A3DA;
+            border-color: #06A3DA;
+            visibility: visible;
+            animation-delay: 0.9s;
+            animation-name: zoomIn;
+            transition: .5s;
+            display: inline-block;
+            line-height: 1.5;
+            color: #fff;
+            text-align: center;
+            cursor: pointer;
+            border-radius: 2px;
+            box-shadow: inset 0 0 0 50px transparent;
+        }
+
+        .btn a {
+            color: #fff;
+            padding: 8px;
+            display: inline-block;
+            font-family: 'Nunito', sans-serif;
+            font-weight: 600;
+        }
+
+        .btn a:hover {
+            color: #000;
+        }
+
+        .btn:hover {
+
+            background-color: #2bb1e0;
+            border-color: #1facde;
+            box-shadow: inset 0 0 0 0 #06A3DA;
+        }
+    </style>
+</head>
+
+<body>
+    <button class="trigger"><i class="fa fa-search"></i></button>
+    <div class="modal">
+        <div class="modal-content ">
+            <span class="close-button">×</span>
+            <div class="search_box">
+
+                <input type='text' placeholder="Type search keyword">
+                <div class="btn">
+                    <a href="#"><i class="fa fa-search"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var modal = document.querySelector(".modal");
+        var trigger = document.querySelector(".trigger");
+        var closeButton = document.querySelector(".close-button");
+
+        function toggleModal() {
+            modal.classList.toggle("show-modal");
+        }
+
+        function windowOnClick(event) {
+            if (event.target === modal) {
+                toggleModal();
+            }
+        }
+
+        trigger.addEventListener("click", toggleModal);
+        closeButton.addEventListener("click", toggleModal);
+        window.addEventListener("click", windowOnClick);
+
+    </script>
+</body>
+
+</html>
