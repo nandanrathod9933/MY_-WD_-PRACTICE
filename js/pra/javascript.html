@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            text-align: center;
+            border: 2px solid;
+
+        }
+
+        .coll {
+            margin: 20px auto;
+        }
+
+        input {
+            border-radius: 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="coll">
+                <h1>Tack</h1>
+                <div class="input ">
+                    <label for="a1">enter english marsk</label>
+                    <input type="number" name="" id="a1" placeholder="enter english mark">
+                </div>
+            </div>
+            <div class="coll">
+                <label for="a2">enter phy marsk</label>
+                <input type="number" name="" id="a2" placeholder="enter phy mark">
+            </div>
+
+            <div class="coll">
+                <label for="a3">enter S.S marsk</label>
+                <input type="number" name="" id="a3" placeholder="enter S.S mark">
+            </div>
+            <div class="coll">
+                <label for="a4">enter mathematics marsk</label>
+                <input type="number" name="" id="a4" placeholder="enter mathematics mark">
+            </div>
+
+            <div class="coll">
+                <label for="a5">enter hindi marsk</label>
+                <input type="number" name="" id="a5" placeholder="enter hindi mark">
+            </div>
+            <input type="button" value="getResult" onclick="submit()" name="btn" id="btn">
+            <input type="text" placeholder="your result is " id="percentage">
+            <input type="text" placeholder="your result is " id="graderesult">
+
+        </div>
+    </div>
+    <!-- ----------- -->
+
+    
+
+
+
+
+    <script>
+        // document.getElementById("btn").addEventListener("click", function (params) {
+        //     console.log("Called");
+        //     let passData = document.getElementById("password")
+        //     console.log(passData.type);
+        //     if (passData.type == "password") {
+        //         console.log("Inp Pass");
+        //         passData.type = "text"
+        //     } else {
+        //         passData.type = "password"
+        //     }
+        // })
+
+        //if else condition to create grade in javascript
+
+
+
+        function submit() {
+            let a = parseFloat(document.getElementById("a1").value);
+            let b = parseFloat(document.getElementById("a2").value);
+            let c = parseFloat(document.getElementById("a3").value);
+            let d = parseFloat(document.getElementById("a4").value);
+            let e = parseFloat(document.getElementById("a5").value);
+            let percentage = document.getElementById("percentage")
+            let graderesult = document.getElementById("graderesult")
+
+
+            let sum = a + b + c + d + e;
+            console.log('total', sum);
+            let taka = sum / 5;
+            console.log(taka + "%", "RESULT");
+            console.log(taka);
+            percentage.value = taka + "%";
+            let grade = ""
+            if (taka > 70) {
+                grade = "First Class";
+            }
+            else if (taka > 60) {
+                grade = "Upper Second";
+            }
+            else if (taka > 50) {
+                grade = "Lower Second";
+            }
+            else if (taka > 40) {
+                grade = "Third Class";
+            } else if (taka < 35) {
+                grade = "Fail";
+            } else {
+                alert("Invalid mark, outside range 0-100");
+            }
+            graderesult.value = grade;
+        }
+
+
+
+    </script>
+</body>
+
+</html>
